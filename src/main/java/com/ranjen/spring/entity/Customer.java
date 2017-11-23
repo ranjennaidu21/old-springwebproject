@@ -15,6 +15,7 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence")
 	@SequenceGenerator(name = "id_Sequence", sequenceName = "customer_id_sequence")
+	//
 	/* FOR MYSQL
 	//	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	 */
