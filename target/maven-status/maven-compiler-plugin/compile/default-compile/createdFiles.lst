@@ -5,5 +5,8 @@ com\ranjen\spring\entity\Customer.class
 com\ranjen\spring\controller\AjaxController.class
 com\ranjen\spring\dao\CustomerDAO.class
 com\ranjen\spring\service\CustomerServiceImpl.class
+com\ranjen\spring\controller\MainPageController.class
+com\ranjen\spring\controller\JQueryTestController.class
 com\ranjen\spring\model\AjaxProductModel.class
+com\ranjen\spring\controller\JQueryUiTestController.class
 com\ranjen\spring\dao\CustomerDAOImpl.class
