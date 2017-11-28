@@ -18,5 +18,8 @@
 		<p>
 			<a href="${pageContext.request.contextPath}/jqueryuitest/main">JQuery UI Test</a>
 		</p>
+		<p>
+			<a href="${pageContext.request.contextPath}/ajax/main">Ajax Test</a>
+		</p>
 </body>
 </html>

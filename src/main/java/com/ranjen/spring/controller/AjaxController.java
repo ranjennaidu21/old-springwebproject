@@ -1,27 +1,49 @@
 package com.ranjen.spring.controller;
-
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-
-//import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
-import com.ranjen.spring.entity.*;
+import com.ranjen.spring.entity.input.SearchPersonInput;
+import com.ranjen.spring.entity.output.SearchPersonOutput;
 import com.ranjen.spring.model.*;
 
 @Controller
 @RequestMapping("/ajax")
-//@WebServlet("/product")
-public class AjaxController extends HttpServlet {
+public class AjaxController {
+	
+	//ALL PAGES
+	@GetMapping("/list")
+	public String listCustomers() {
+		return "ajax/list-ajax-page";
+	}
+	
+	@GetMapping("/basicAjax")
+	public String getBasicAjax() {
+		return "ajax/basic";
+	}
+	
+	@GetMapping("/datatables")
+	public String listDataTables() {
+		return "ajax/list-web";
+	}
+	
+	@GetMapping("/main")
+	public String getAjaxMainPage() {
+		return "ajax/main";
+	}
+	
+	// ALL AJAX OBJECTS RETURNING TO THE JAVASCRIPT
 	@GetMapping("/product")
 	protected void doGet(HttpServletRequest request,HttpServletResponse response){
 		PrintWriter out;
@@ -43,15 +65,14 @@ public class AjaxController extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
-	@GetMapping("/list")
-	public String listCustomers() {
-		return "list-ajax-page";
-	}
 	
-	@GetMapping("/datatables")
-	public String listDataTables() {
-		return "list-web";
+	@RequestMapping("/search")
+	public @ResponseBody Object getSearchUserProfiles(@RequestBody SearchPersonInput search, HttpServletRequest request,Model theModel){
+		
+		List<String> myList = new ArrayList<String>();
+		myList.add("First Name: " + search.getpName());
+		myList.add("Last Name: " + search.getlName());
+		return myList;
 	}
 
 }
