@@ -1,5 +1,7 @@
 com\ranjen\spring\service\CustomerService.class
 com\ranjen\spring\entity\AjaxProduct.class
+com\ranjen\spring\entity\Member.class
+com\ranjen\spring\controller\FormController.class
 com\ranjen\spring\entity\input\SearchPersonInput.class
 com\ranjen\spring\controller\AjaxController.class
 com\ranjen\spring\dao\CustomerDAO.class

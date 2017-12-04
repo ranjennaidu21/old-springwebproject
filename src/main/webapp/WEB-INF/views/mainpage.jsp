@@ -21,5 +21,8 @@
 		<p>
 			<a href="${pageContext.request.contextPath}/ajax/main">Ajax Test</a>
 		</p>
+		<p>
+			<a href="${pageContext.request.contextPath}/form/main">Form Test</a>
+		</p>
 </body>
 </html>

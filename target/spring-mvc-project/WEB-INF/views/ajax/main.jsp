@@ -28,7 +28,7 @@ border-radius:100px;
 			<a href="${pageContext.request.contextPath}/ajax/basicAjax">Ajax Basic Call</a>
 		</p>
 		<p>
-			<a href="${pageContext.request.contextPath}/ajax/list">Ajax Simple List</a>
+			<a href="${pageContext.request.contextPath}/ajax/list">Ajax Simple List Using GSON but Old HttpServletResponse</a>
 		</p>
 		<p>
 			<a href="${pageContext.request.contextPath}/ajax/datatables">Ajax Datatable</a>

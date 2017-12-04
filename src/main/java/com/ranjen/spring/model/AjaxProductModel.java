@@ -16,6 +16,5 @@ public class AjaxProductModel {
 		result.add(new AjaxProduct("p02","name 2",200));
 		result.add(new AjaxProduct("p03","name 3",300));
 		return result;
-		
 	}
 }

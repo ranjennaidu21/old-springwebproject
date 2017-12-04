@@ -13,7 +13,7 @@
 	<legend> Basic Ajax call send object to controller</legend>
 	<input type="button" value="Display Object" id="button1">
 	<br>
-	<div id="result1"></div>
+	<div id="myResult"></div>
 </fieldset>
 </body>
 
