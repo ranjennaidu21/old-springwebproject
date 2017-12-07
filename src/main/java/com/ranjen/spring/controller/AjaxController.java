@@ -2,6 +2,7 @@ package com.ranjen.spring.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.*;
@@ -35,7 +36,7 @@ public class AjaxController {
 	
 	@GetMapping("/datatables")
 	public String listDataTables() {
-		return "ajax/list-web";
+		return "ajax/list-simple-datatable";
 	}
 	
 	@GetMapping("/main")
@@ -67,12 +68,14 @@ public class AjaxController {
 	}
 	
 	@RequestMapping("/search")
-	public @ResponseBody Object getSearchUserProfiles(@RequestBody SearchPersonInput search, HttpServletRequest request,Model theModel){
-		
-		List<String> myList = new ArrayList<String>();
-		myList.add("First Name: " + search.getpName());
-		myList.add("Last Name: " + search.getlName());
-		return myList;
+	public @ResponseBody Object getSearchUserProfiles(@RequestBody SearchPersonModel mysearch, HttpServletRequest request,Model theModel){
+		return mysearch;
+	}
+	
+	@RequestMapping("/datatablesearch")
+	public @ResponseBody Object getDataTableSearch(@RequestBody SearchPersonInput search, HttpServletRequest request,Model theModel){
+		SearchPersonOutput output = new SearchPersonOutput();
+		return output.getList(search);
 	}
 
 }

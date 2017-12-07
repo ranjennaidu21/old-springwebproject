@@ -9,7 +9,7 @@
 
 <body>
 
-    <form:form action="successCheckboxes" method="POST" commandName="member">
+    <form:form id="myCheckBoxes" action="successCheckboxes" method="POST" commandName="member">
         <table>
             <tr>
                 <td>Are you a new member?</td>
@@ -18,8 +18,8 @@
             </tr>
             <tr>
                 <td>Choose the courses you like:</td>
-                <td><form:checkboxes path="courses" items="${courses}" />
-                </td>
+                <%-- <td><form:checkboxes path="courses" items="${courses}" /></td> --%>
+                <td><form:checkboxes path="mapList" items="${mapList}" /></td>
             </tr>
             <tr>
                 <td><input type="submit" name="submit" value="Submit"></td>
@@ -27,6 +27,14 @@
             <tr>
         </table>
     </form:form>
+    
+    <div id="other">
+	  <button type="button" id="myButton">Get checked list</button>
+	  <button type="button" id="selectAllButton">Select All</button>
+	  <button type="button" id="clearButton">Clear button</button>
+	</div>
+	
+	<div id="myValues"></div>
 
 </body>
 

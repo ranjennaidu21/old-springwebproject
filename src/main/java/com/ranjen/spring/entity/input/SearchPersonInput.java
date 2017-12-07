@@ -1,32 +1,17 @@
 package com.ranjen.spring.entity.input;
+import java.util.List;
 
-import java.io.Serializable;
+import com.ranjen.spring.model.*;
 
-public class SearchPersonInput implements Serializable {
+public class SearchPersonInput{
 	
-	private static final long serialVersionUID = 1L;
-	private String pName;
-	private String lName;
-	
-	public SearchPersonInput(String pName, String lName) {
-		this.pName = pName;
-		this.lName = lName;
+	private List<SearchPersonModel> list;
+
+	public List<SearchPersonModel> getList() {
+		return list;
 	}
 
-	public String getpName() {
-		return pName;
+	public void setList(List<SearchPersonModel> list) {
+		this.list = list;
 	}
-
-	public void setpName(String pName) {
-		this.pName = pName;
-	}
-
-	public String getlName() {
-		return lName;
-	}
-
-	public void setlName(String lName) {
-		this.lName = lName;
-	}
-
 }

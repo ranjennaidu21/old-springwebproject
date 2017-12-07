@@ -1,50 +1,19 @@
 package com.ranjen.spring.entity.output;
+import java.util.ArrayList;
 import java.util.List;
+
+import com.ranjen.spring.entity.input.SearchPersonInput;
+import com.ranjen.spring.model.SearchPersonModel;
 
 public class SearchPersonOutput {
 
-	private List<String> myPersonList;
-	private String firstName;
-	private String lastName;
-	
-	public SearchPersonOutput(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
-	public List<String> getMyPersonList() {
-		return myPersonList;
-	}
-
-	public void setMyPersonList(List<String> myPersonList) {
-		this.myPersonList = myPersonList;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+public List<SearchPersonModel> getList(SearchPersonInput list){
+	List<SearchPersonModel> myList = list.getList();
+	myList.add(new SearchPersonModel("Deepika", "Padukone"));
+	myList.add(new SearchPersonModel("Katrina", "Kaif"));
+	return myList;
+}
 
 }
+	
+	

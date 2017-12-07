@@ -22,8 +22,8 @@ $(document).ready(function() {
 	});
 	
 	function getResultObject(result){
-		var firstName = result[0];
-		var lastName = result[1];
+		var firstName = result['pName'];
+		var lastName = result['lName'];
 		$("#myResult").html(firstName + "<br>" +  lastName);
 	}
 });
