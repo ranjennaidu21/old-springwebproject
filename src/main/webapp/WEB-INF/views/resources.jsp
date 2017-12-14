@@ -6,6 +6,8 @@
 <!-- CSS -->
 <%-- 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">	  
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-customer-style.css"> --%>
+<!-- BLF STYLE -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/blf_style.css">
 <!-- DATATABLE PLUGIN -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/datatables.css">
 <!-- JQUERY UI CSS -->
@@ -15,8 +17,16 @@
 <!-- JQUERY -->
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.2.1.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/datatables.js"></script>
+<!-- JQUERY EXTENSION -->
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.extensions.js"></script>
 <!-- JQUERY UI -->
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js"></script>
+<!-- MOMENT PLUGIN -->
+<script src="${pageContext.request.contextPath}/resources/js/moment.min.js"></script>
+<!-- MOMENT TIMEZONE PLUGIN -->
+<script src="${pageContext.request.contextPath}/resources/js/moment-timezone-with-data.min.js"></script>
+
+	
 </head>
 
 <body>

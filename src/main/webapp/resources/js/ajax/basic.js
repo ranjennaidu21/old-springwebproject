@@ -3,7 +3,8 @@ $(document).ready(function() {
 		
 			   var searchObj = {
 			      "pName" : "bhanu",
-			      "lName" :"prasad"
+			      "lName" :"prasad",
+			      "date"  : getDate()
 			   };
 			   var result;
 			   $.ajax({
@@ -21,10 +22,24 @@ $(document).ready(function() {
 		 
 	});
 	
+	function getDate(){
+		//var mydate = new Date('2014-04-03 02:01:01');
+		//get date
+		var localDate = new Date("2014-06-01 13:01:02");
+		//covert date to string
+		var localDateString = localDate.toString();
+		//change date to europe/riga timezone
+		var myDate    = moment.tz(localDateString, "Europe/Riga");
+		//change back the date to Malaysia time
+		var myDate2 = moment.tz(myDate.toString(), "Asia/Kuala_Lumpur");
+		return myDate2;
+	}
+	
 	function getResultObject(result){
 		var firstName = result['pName'];
 		var lastName = result['lName'];
-		$("#myResult").html(firstName + "<br>" +  lastName);
+		var date = result['date'];
+		$("#myResult").html(firstName + "<br>" +  lastName + "<br>" +  date);
 	}
 });
 

@@ -13,5 +13,8 @@
 		<p>
 			<a href="${pageContext.request.contextPath}/form/checkboxes">Checkboxes</a>
 		</p>
+		<p>
+			<a href="${pageContext.request.contextPath}/form/popup">Pop Up</a>
+		</p>
 </body>
 </html>

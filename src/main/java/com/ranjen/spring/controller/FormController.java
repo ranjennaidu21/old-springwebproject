@@ -51,6 +51,16 @@ public class FormController{
 		return "form/main";
 	}
 	
+	@GetMapping("/popup")
+	public String getPopUpPage() {
+		return "form/popup";
+	}
+	
+	@GetMapping("/popUpContent")
+	public String getPopUpContent() {
+		return "form/popUpContent";
+	}
+	
 	@PostMapping("/successCheckboxes")
 	public String submitForm(Model model,Member member) {
 		model.addAttribute("member", member);

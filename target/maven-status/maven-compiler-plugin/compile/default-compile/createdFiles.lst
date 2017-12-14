@@ -5,6 +5,7 @@ com\ranjen\spring\controller\FormController.class
 com\ranjen\spring\entity\input\SearchPersonInput.class
 com\ranjen\spring\controller\AjaxController.class
 com\ranjen\spring\dao\CustomerDAO.class
+com\ranjen\spring\model\SearchPersonModel.class
 com\ranjen\spring\service\CustomerServiceImpl.class
 com\ranjen\spring\controller\MainPageController.class
 com\ranjen\spring\controller\JQueryUiTestController.class
